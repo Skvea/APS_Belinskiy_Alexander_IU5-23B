@@ -4,8 +4,8 @@ Console.OutputEncoding = Encoding.UTF8;
 Console.InputEncoding = Encoding.UTF8;
 
 string dbPath = "students.db";
-string facCsv = @"D:\pr\csharp\DZ2\DZ2\bin\Debug\net10.0\fac.csv";
-string stuCsv = @"D:\pr\csharp\DZ2\DZ2\bin\Debug\net10.0\stu.csv";
+string facCsv = Path.Combine(AppContext.BaseDirectory, "fac.csv");
+string stuCsv = Path.Combine(AppContext.BaseDirectory, "stu.csv");
 
 var db = new DatabaseManager(dbPath);
 db.InitializeDatabase(facCsv, stuCsv);
