@@ -180,7 +180,7 @@ class DatabaseManager
 
         conn.Open();
         var cmd = conn.CreateCommand();
-        cmd.CommandText = "DELETE FROM dev WHERE stu_id = @id";
+        cmd.CommandText = "DELETE FROM stu WHERE stu_id = @id";
         cmd.Parameters.AddWithValue("@id", id);
         cmd.ExecuteNonQuery();
     }
