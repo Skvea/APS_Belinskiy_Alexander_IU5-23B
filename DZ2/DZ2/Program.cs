@@ -220,7 +220,7 @@ static void ReportsMenu(DatabaseManager db)
 static void Report1_StudentsWithFacs(DatabaseManager db)
 {
     new ReportBuilder(db)
-    .Query(@"SELECT d.stu_name, fac.fac_name, d.stu_commits
+    .Query(@"SELECT d.stu_name, fac.fac_name, d.stu_gpa
         FROM stu d
         JOIN fac ON d.fac_id = fac.fac_id
         ORDER BY d.stu_name")
